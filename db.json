@@ -1,47 +1,4 @@
 {
-  "users": [
-    {
-      "id": "1716774831987",
-      "email": "ccush70@gmail.com",
-      "username": "ccush2",
-      "password": "$2a$10$oToIZL.hZLAAYmLM1VG3euwvc3zfO3QQbLkvre4Way0t3/TYlyNxO",
-      "name": {
-        "firstname": "Charlie",
-        "lastname": "Cush"
-      },
-      "cart": [
-        {
-          "productId": 4,
-          "quantity": 1
-        }
-      ],
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNjdXNoMiIsImlhdCI6MTcxNzUzMjM3Nn0.lkRSzatX7cTAvK6qFXaDdfdKQDc4xsGj2s8sDulyOTY"
-    }
-  ],
-  "products": [
-    {
-      "id": 3,
-      "title": "Mens Cotton Jacket",
-      "price": 55.99,
-      "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
-    },
-    {
-      "id": 4,
-      "title": "Mens Casual Slim Fit",
-      "price": 15.99,
-      "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
-    },
-    {
-      "id": 2,
-      "title": "Mens Casual Premium Slim Fit T-Shirts ",
-      "price": 22.3,
-      "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
-    },
-    {
-      "id": 12,
-      "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
-      "price": 114,
-      "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg"
-    }
-  ]
+  "users": [],
+  "products": []
 }
