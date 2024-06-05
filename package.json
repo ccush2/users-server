@@ -4,13 +4,16 @@
   "description": "Server for e-commerce site users",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "jest"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "express": "^4.19.2",
+    "jest": "^29.7.0",
     "json-server": "^0.16.3",
     "jsonwebtoken": "^9.0.2",
-    "stripe": "^15.3.0"
+    "stripe": "^15.3.0",
+    "supertest": "^7.0.0"
   }
 }

@@ -83,6 +83,13 @@ server.post("/login", (req, res) => {
 });
 
 /**
+ * Protected route for testing authentication middleware.
+ */
+server.get("/api/protected", authMiddleware, (req, res) => {
+  res.json({ message: "Access granted" });
+});
+
+/**
  * Signup endpoint to create a new user account.
  */
 server.post("/signup", (req, res) => {
@@ -297,6 +304,22 @@ server.post("/create-payment-intent", async (req, res) => {
 });
 
 /**
+ * Get the logged-in user's information.
+ */
+server.get("/api/user", authMiddleware, (req, res) => {
+  const userId = req.user.id;
+  const db = router.db;
+
+  const user = db.get("users").find({ id: userId }).value();
+
+  if (!user) {
+    return res.status(404).json({ error: "User not found" });
+  }
+
+  res.json(user);
+});
+
+/**
  * Delete a user account.
  */
 server.delete("/api/users/:userId", authMiddleware, (req, res) => {
@@ -338,6 +361,8 @@ server.post("/logout", authMiddleware, (req, res) => {
 
 server.use(router);
 
-server.listen(PORT, () => {
+const serverInstance = server.listen(PORT, () => {
   console.log(`Mock server is running on port ${PORT}`);
 });
+
+module.exports = { server, serverInstance };
